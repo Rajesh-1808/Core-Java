@@ -2145,7 +2145,7 @@ What is Thread in MT:-
 ---------------------
 ->A light weight execution process is called Thread.
 ->It will execute multiple functionalities in same time.
-->
+->Thread is a pre-defined class from java.util.class.
 --------------------------------------------------------
 MULTI TASKING:-
 -------------
@@ -2153,9 +2153,10 @@ MULTI TASKING:-
 ->Two types:
   1)PBM (Process Based Multittasking) Ex: CPU, Browser
       ->Executing several tasks simaultaneously where each task is a separate independent programme(process) is called PBM.
-      ->These are OS level task at Programming level.
+      ->These are OS level task but not at Programming level.
   2)TBM (Thread Based Multittasking)  Ex: Text editing, spell checking
       ->Executing several tasks simaultaneously where each task is a separate independent programme(process) is called TBM.
+      ->TBM is suitable at programmatic level.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 The main important application areas of multithreading are :
 --------------------------------------------------------
