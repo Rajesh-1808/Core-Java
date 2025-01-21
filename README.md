@@ -2165,9 +2165,32 @@ The main important application areas of multithreading are :
 3) To develop games.
 4) To develop a Server.
 5) To develop servers and web application servers.
-6) When comparing C++ developing multitgreading programs in java is very easy because java provides inbuilt support by providing a RICH API(Thread, ThreadGroup,      Runnable etc..).
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+6) When comparing C++ developing multitgreading programs in java is very easy because java provides inbuilt support by providing a RICH API(Thread, ThreadGroup,Runnable etc..).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Is class a Thread? MultiThreading?
+---------------------------------
+->A simple class is not a thread by itself but it is executed with the help of the main thread only.
+->In each and devery program a Main Thread is present.
+->A program is worked on the thread basis.
+->To get current thread name we have to use (Thread.currentThread().getName()) method.
+->A Class is considered as thread when we extends Thread class then we go for the concept of Multithreading and it also implements the runnable interface.
+->We will not get the same output every time we execute the program in Multithreading.
+->We can never determine or predict the output in Multithreading.
+->If any thread started aldready we cannot restart the thread again if we do we get IllegalThreadStateException. (We cannot use start method 2 times in for a thread).
+->Dont go for Multithreading if you are not callin t.start() method.
+->We need to override the Thread class run() method
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Thread Scheduler:-
+-----------------
+->Thread Scheduler is responsible for determining the execution of the threads. If multilple threads are waiting for the execution then Thread Scheduler is responsibe for the execution 
+  of those threads.
+->Thread Scheduler is part of JVM and we cannot determine the order of thread execution as it varies from JVM to JVM.
+----------------------------------------------------------------------------------------------------------------------
+Thread Methods:-
+----------------
+1) t.start() : When we call a start method a new thread will be created and begins the execution and internally JVM calls the run method by default.
+	(Note: A thread class run method consist of nothing by default). (we cannot use use start method twice for a thread it is meant to be used only once)
+2} t.run() : When we call run method no new thread will be created and it executes just like the normal method.
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
