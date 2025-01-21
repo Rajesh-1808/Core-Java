@@ -2155,7 +2155,7 @@ MULTI TASKING:-
       ->Executing several tasks simaultaneously where each task is a separate independent programme(process) is called PBM.
       ->These are OS level task but not at Programming level.
   2)TBM (Thread Based Multittasking)  Ex: Text editing, spell checking
-      ->Executing several tasks simaultaneously where each task is a separate independent programme(process) is called TBM.
+      ->Executing multiple threads simultaneously which are in the same process where each task is managed as a separate thread (within the same process) is called TBM.
       ->TBM is suitable at programmatic level.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 The main important application areas of multithreading are :
