@@ -2182,6 +2182,7 @@ Is class a Thread? MultiThreading?
 ->Dont go for Multithreading if you are not callin t.start() method.
 ->We need to override the Thread class run() method.
 ->Runnable is a interface which contains only abstract method run().
+->For each and every thread the count starts from Thread-0 and the count is stored in the PC Registers in the JVM.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Thread Scheduler:-
 -----------------
@@ -2204,6 +2205,7 @@ extends Thread vs implements Runnable:-
 ->Thread(Runnable Object) : Allocates a new Thread object, We can send the runnable object to the Thread class Object so that it can work multiple threads parallely, it works as a copy constructor concept.
 ->Implements Runnable interface is far better or best way of programming than extends in the concept of Multithreading.
 ->We can extend a class and implements runnable at the same time in multithreading which is a concept of Hybrid Inheritance.
+
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
