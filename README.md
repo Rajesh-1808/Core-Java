@@ -2169,6 +2169,8 @@ The main important application areas of multithreading are :
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Is class a Thread? MultiThreading?
 ---------------------------------
+->Thread class is present in java.lang package.
+->Thread class implements run() with empty implementation.
 ->A simple class is not a thread by itself but it is executed with the help of the main thread only.
 ->In each and devery program a Main Thread is present.
 ->A program is worked on the thread basis.
@@ -2178,7 +2180,8 @@ Is class a Thread? MultiThreading?
 ->We can never determine or predict the output in Multithreading.
 ->If any thread started aldready we cannot restart the thread again if we do we get IllegalThreadStateException. (We cannot use start method 2 times in for a thread).
 ->Dont go for Multithreading if you are not callin t.start() method.
-->We need to override the Thread class run() method
+->We need to override the Thread class run() method.
+->Runnable is a interface which contains only abstract method run().
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Thread Scheduler:-
 -----------------
@@ -2190,7 +2193,16 @@ Thread Methods:-
 ----------------
 1) t.start() : When we call a start method a new thread will be created and begins the execution and internally JVM calls the run method by default.
 	(Note: A thread class run method consist of nothing by default). (we cannot use use start method twice for a thread it is meant to be used only once)
-2} t.run() : When we call run method no new thread will be created and it executes just like the normal method.
+2) t.run() : Allocates a new Thread object, When we call run method no new thread will be created and it executes just like the normal method. It is the only abstract method present in 
+   the Runnable interface.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+extends Thread vs implements Runnable:-
+--------------------------------------
+->When we extend Thread class we cannot extend any other class if we require also but when we implememnt the runnable interface we can save a space for our class to extend any other 	 
+  class in future or now.
+->When extend thread class each and every thread creates unique object and associate with it. When we implements Runnable it shares the same object to multiple threads.
+->Thread(Runnable Object) : We can send the runnable object to the Thread class Object so that it can work multiple threads parallely, it works as a copy constructor concept.
+
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
