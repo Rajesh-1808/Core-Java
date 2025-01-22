@@ -2201,8 +2201,9 @@ extends Thread vs implements Runnable:-
 ->When we extend Thread class we cannot extend any other class if we require also but when we implememnt the runnable interface we can save a space for our class to extend any other 	 
   class in future or now.
 ->When extend thread class each and every thread creates unique object and associate with it. When we implements Runnable it shares the same object to multiple threads.
-->Thread(Runnable Object) : We can send the runnable object to the Thread class Object so that it can work multiple threads parallely, it works as a copy constructor concept.
-
+->Thread(Runnable Object) : Allocates a new Thread object, We can send the runnable object to the Thread class Object so that it can work multiple threads parallely, it works as a copy constructor concept.
+->Implements Runnable interface is far better or best way of programming than extends in the concept of Multithreading.
+->We can extend a class and implements runnable at the same time in multithreading which is a concept of Hybrid Inheritance.
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
