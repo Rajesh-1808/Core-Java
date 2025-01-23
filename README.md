@@ -2181,7 +2181,7 @@ Is class a Thread? MultiThreading?
 ->If any thread started aldready we cannot restart the thread again if we do we get IllegalThreadStateException. (We cannot use start method 2 times in for a thread).
 ->Dont go for Multithreading if you are not callin t.start() method.
 ->We need to override the Thread class run() method.
-->Runnable is a interface which contains only abstract method run().
+->Runnable Interface is present in java.lang package and it is a Functional Interface. Runnable is a interface which contains only abstract method run().
 ->For each and every thread the count starts from Thread-0 and the count is stored in the PC Registers in the JVM.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Thread Scheduler:-
@@ -2192,10 +2192,16 @@ Thread Scheduler:-
 ----------------------------------------------------------------------------------------------------------------------
 Thread Methods:-
 ----------------
-1) t.start() : When we call a start method a new thread will be created and begins the execution and internally JVM calls the run method by default.
+1) t.start() : It is from Thread class. When we call a start method a new thread will be created and begins the execution and internally JVM calls the run method by default.
 	(Note: A thread class run method consist of nothing by default). (we cannot use use start method twice for a thread it is meant to be used only once)
-2) t.run() : Allocates a new Thread object, When we call run method no new thread will be created and it executes just like the normal method. It is the only abstract method present in 
-   the Runnable interface.
+2) t.run() : It is from Thread class. Allocates a new Thread object, When we call run method no new thread will be created and it executes just like the normal method. It is the only 
+   abstract method present in the Runnable interface.
+3) t.sleep() : It is from Object class and with parameters of nanosec and millisec. It makes the thread sleep by stopping if from execution.
+4) t.notify() : It is from Object class. It enables thethread from sleep() to bring it back to execution.
+5) t.notifyAll() : It is from Object class. It enables thethread from sleep() to bring it back to execution.
+6) t.wait() : It is from Object class. It helps to make the Thread wait.
+7) t.suspend() : 
+8) t.resume() :
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 extends Thread vs implements Runnable:-
 --------------------------------------
@@ -2205,8 +2211,43 @@ extends Thread vs implements Runnable:-
 ->Thread(Runnable Object) : Allocates a new Thread object, We can send the runnable object to the Thread class Object so that it can work multiple threads parallely, it works as a copy constructor concept.
 ->Implements Runnable interface is far better or best way of programming than extends in the concept of Multithreading.
 ->We can extend a class and implements runnable at the same time in multithreading which is a concept of Hybrid Inheritance.
-
-
+->Overloading(same name with different arguments) of run() method is possible. The start() call run() with no arguments and we need to call run() with different arguments.
+->If we dont override the run method the Thread class run() will be called. So we must need to override the run() in Multithreading.
+->We should not Override the start method, If we re doing it dont go to the concept of Multithreading. If we override the start() then thereis no scope of creating a new Thread because it is skipping tha parent class (Thread) functionalities and executing the child class.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Thread Life cycle:-
+------------------
+Thread States : 
+	1)New/Born
+ 	2)Ready/Runnable
+  	3)Running
+   	4)Waiting/Sleeping/Blocking
+   	5)Dead/Terminated
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Getting and Setting of Name of Thread:-
+-------------------------------------
+->Every thread has some name in Java. By default if you are not giving any name to the thread the JVM caretes the thread name as Thread-0 and count increases.
+->Thread.currentThread().getName() : Helps to get the Thread name from JVM.
+->Thread.currentThread().setName(" ") : Helps to set tha Thread name as our own apart from the default name of JVM.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Thread Priority:-
+----------------
+->Every Thread in Java has some priority. By default JVM will provide thread priority as 5.
+->The void range of Thread priority is 1 to 10 but not 0 to 10.
+->Where 1 is the least priority and 10 is the highest priority.
+->Thread also defines some constants to represent some standard priority.
+	1)Thread.MIN_PRIORITY - 1
+ 	2)Thread.MAX_PRIORITY - 10
+  	3)Thread.NORM_PRIORITY - 5
+->Thread scheduler will use the Thread priorities while allocating processors to the Thread which is having highest priority. We will get a chance for execution.
+->If two threads have a same priority then we cannot expect an exact execution order.It varies from JVm to JVM.
+->We can get and the set the priority of a thread by :
+	1)public int getPriority().
+ 	2)public int setPriority().
+->We can prevent a Thread execution by using the following methods
+	1)yield()
+ 	2)join()
+  	3)sleep()
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
 =====================================
