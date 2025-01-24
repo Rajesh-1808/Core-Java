@@ -2274,6 +2274,10 @@ yield() vs join() vs sleep() :-
 ->If a Thread doesnt want to perform any operation for a particular amount of time like pausing is required then we should go for sleep().
 ->We need to handle the Interrupted exception by try catch. It passes parameters og nanosec and millisec.
 ->join() and sleep() can be interrupted but not the yield().
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+interrupt():
+------------
+->We can only interrupt a thread when the thread is in sleep mode.
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
 =====================================
