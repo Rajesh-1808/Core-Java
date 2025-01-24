@@ -2196,7 +2196,8 @@ Thread Methods:-
 	(Note: A thread class run method consist of nothing by default). (we cannot use use start method twice for a thread it is meant to be used only once)
 2) t.run() : It is from Thread class. Allocates a new Thread object, When we call run method no new thread will be created and it executes just like the normal method. It is the only 
    abstract method present in the Runnable interface.
-3) t.sleep() : It is from Object class and with parameters of nanosec and millisec. It makes the thread sleep by stopping if from execution.
+3) t.sleep() : It is from Object class and with parameters of nanosec and millisec. It makes the thread sleep by stopping if from execution. It is used with try catch as it throws 
+   Interrupted Exception.
 4) t.notify() : It is from Object class. It enables thethread from sleep() to bring it back to execution.
 5) t.notifyAll() : It is from Object class. It enables thethread from sleep() to bring it back to execution.
 6) t.wait() : It is from Object class. It helps to make the Thread wait.
@@ -2248,6 +2249,31 @@ Thread Priority:-
 	1)yield()
  	2)join()
   	3)sleep()
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+yield() vs join() vs sleep() :-
+-----------------------------
+1)yield():
+---------
+->yield() is a hint to the scheduler that the current thread is willing to yield its current use of a processor. It is used to pause the current executing thread to give the chance for 
+  reamining threads to execute.
+->If multiple threads having the same priortiy then we cant expect the order of execution as it is depended on Thread Scheduler. If thread is yield() then we cant determine when the 
+  thread is executed again.
+->If there is no waiting Threads or all waiting threads have the low priority then the flow of execution of threads is as usual.
+->The thread which is not yield() gets the higher number of chances of exxecution.
+->Some OS may not provide proper support for yield methods.
+
+2)join():
+--------
+->If a thread(t3) wants to wait until completing until thread(t1) then we should go for t1.join(). If thread(t1) want to wait and let thread(t2) to complete then t1(where we need to use 
+  the thread(t2) object by creation constructor in thread(t1)) has to call t2.join(). 
+->Every join() throws Interrupted Exception (Checked Exception). So we need to handle the execpetion by either try catch or throws keyword. We need to choose surrounded try catch because 
+  according to the overriding rules if we are using throw keyword in the child class then the parent class should also throws the same exception so the throw keyowrd doesnt work. 
+
+3)sleep():
+---------
+->If a Thread doesnt want to perform any operation for a particular amount of time like pausing is required then we should go for sleep().
+->We need to handle the Interrupted exception by try catch. It passes parameters og nanosec and millisec.
+->join() and sleep() can be interrupted but not the yield().
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
 =====================================
