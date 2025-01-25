@@ -2275,9 +2275,49 @@ yield() vs join() vs sleep() :-
 ->We need to handle the Interrupted exception by try catch. It passes parameters og nanosec and millisec.
 ->join() and sleep() can be interrupted but not the yield().
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Daemon Thread:-
+-------------
+->Any Thread executing in the background is known as Daemon Thread. Executing the threads in the background is the concept of Daemon Thread. Ex : Garbage Collector
+->setDaemon(boolean on) : Marks this thread as either a daemon thread or a user thread.
+->isDaemon() : Tests if this thread is a daemon thread.
+->If you are setting a thread to Daemon after start then we will get a exception as IllegalThreadStateException. So you need to set id before the start() as setDaemon(true).
+->We cannot set the main Thread to Daemon because main thread is responsible for the execution of the remaining threads in the program and main thread is by default Non-Daemon Thread. So 
+  we set tha main thread we will get an IllegalThreadStateException. (Thread.currentThread().setDeamon(true))
+->The main purpose of Daemon thread is to provide the support for non-Daemon Thread.
+->Usually Daemon threads are of low priority but based on requirement we cannot give high priority ti the Daemon threads.
+->We can change the Deamon thread nature until the thread starts but once the thread is started we are not allowed to change the Daemon Thread if we do we will get a RunTime exception as
+  IllegalThreadStateException.
+  ->If a Parent Thread is Daemon then the child is also daemon thread and vice-versa.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 interrupt():
 ------------
 ->We can only interrupt a thread when the thread is in sleep mode.
+->This method is interrupting the thread until the thread is interrupting itself.
+->We will get interruptedexception when we use interrupt() with sleep and a message like sleep interrupted or we can also write our own message but the threads complete its exection even 
+  after the exception arises as the thread completes its execution once it starts.
+->Once target thread enter into sleep()/waiting() then only thread will get interrupt() otherwise there is no chance of interruption.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Synchronization:-
+----------------
+->The main motive of Synchronization is to prevent Data Corruption or to avoid data inconsistency.
+->It allows the single thread to acces the resources alone at a time instead of multiple theads accessing the same resources at a time and finally produces erroreneous and unforseen 
+  results.
+->Java provides  a way of creating threads and synchronizing their tasks by using synchronization.
+->Synchronized blocks in java are marked with the synchrnized keyword.
+->A synchronized block in java is synchronized on same object.
+->All synchronized blocks  synchronized on the same object can only have one thread executiong inside them at a time.
+->All other threads attempting tp enter the synchronized block are blocked until the thread inside the synchronized block exists the block.
+->Only one thread can execute at a time.
+->This synchronization is implemented in java with a concept called monitors.
+->Only one thread can own a monitor at a given time.
+->When a thread acquires a lock it is said to have entered the monitor.
+->Inter thread communication.
+->Producer and Consumer Problem.
+->Wait() : It is present in Object class so it can be called directly no need of object reference. Handle the InterruptedException and you can also use throws.
+->If you are calling wait() without synchronized method you will get illegalMonitorStateException : Current thread is not Owner.
+->You need to call the wait() in synchronized methods and blocks only.
+=================================================================================================================================================================
+
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
 =====================================
