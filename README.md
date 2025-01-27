@@ -2319,6 +2319,7 @@ Synchronization:-
 =================================================================================================================================================================
 JAVA 8 FEATURES:-
 ================
+Introduced on 2014 March 18.
 Interfaces:
 -----------
 	1.Normal Interface
@@ -2330,19 +2331,44 @@ Interfaces:
   	3.Marker Interface
    		->In any interface if we dont have any methods then we can consider as Marker interface which will provide some default capabilities.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What's New in JAVA 8?
+---------------------
+1. Date Time API
+2. Lambda expressions
+3. Stream API
+4. ForEach() Method
+5. Default Method
+6. StringJoiner
+7. MethodReference
+8. Nashone JavaScript Engine
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The main Advantage of Java 8 features is concise coding and enabling Functional Programming:
 1. Lambda Expression:-
    -------------------
+   ->The main Objective os Lambda expressions is to bring the functional programming into java.
+   ->Lambda expression is a anonymous(Nameless without return type and without access modifier) function in java.
    ->If we want to work with lambda expressions we must use functional interfaces only other than functional interfaces we will not use lambda expressions anywhere.
-->The It provides a clear and concise way to implement SAM interface (Single Abstract Method) by using an expression. 							
+   ->The It provides a clear and concise way to implement SAM interface (Single Abstract Method) by using an expression.
+   Lambda Syntax :
+   -------------
+   1. No arguments : () -> Systemm.out.println("Hello");
+   2. One argument : s -> Systemm.out.println(s);
+   3. Two arguments : (x, y) -> x + y;
+   4. With explicit argument types : (Integer x, Integer y) -> x + y
+   5. Multiple statements : (x, y) -> {
+      				Systemm.out.println(x);
+      				Systemm.out.println(y);
+      				return (x + y);
+      				}				
 3. Functional Interface:-
-5. Default methods and static methods in interfaces:-
-6. Predefined 
+4. Default methods and static methods in interfaces:-
+5. Predefined Functional Interface (Predicate, Function, Consumer, Supplier.. etc):-
+6. Double Colon Opaerator (::) - Method reference, Constructor Reference :-
 7. java.util.function package:-
-8. Stream API and Parallel Stream:-
+8. Streams API and Parallel Stream:-
 9. Date and time API:-
 10. Optional Class:-
-11. 
+11. Nashron JavaScript Engine:-
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
