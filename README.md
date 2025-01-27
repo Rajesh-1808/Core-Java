@@ -2317,6 +2317,32 @@ Synchronization:-
 ->If you are calling wait() without synchronized method you will get illegalMonitorStateException : Current thread is not Owner.
 ->You need to call the wait() in synchronized methods and blocks only.
 =================================================================================================================================================================
+JAVA 8 FEATURES:-
+================
+Interfaces:
+-----------
+	1.Normal Interface
+ 		->before 1.8 (abstract methods and final variables)
+   		->after 1.8 (abstract methods + default methods + static methods + final variables) : to achieve backward compatibility
+     		->after 1.9 (private methods)
+ 	2.Functional Interface
+  		->In any interface if we have only one abstract method and any number of default methods, static methods and private methods (SAM : Single Abstract Method).
+  	3.Marker Interface
+   		->In any interface if we dont have any methods then we can consider as Marker interface which will provide some default capabilities.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The main Advantage of Java 8 features is concise coding and enabling Functional Programming:
+1. Lambda Expression:-
+   -------------------
+   ->If we want to work with lambda expressions we must use functional interfaces only other than functional interfaces we will not use lambda expressions anywhere.
+->The It provides a clear and concise way to implement SAM interface (Single Abstract Method) by using an expression. 							
+3. Functional Interface:-
+5. Default methods and static methods in interfaces:-
+6. Predefined 
+7. java.util.function package:-
+8. Stream API and Parallel Stream:-
+9. Date and time API:-
+10. Optional Class:-
+11. 
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
