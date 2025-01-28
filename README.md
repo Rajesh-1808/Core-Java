@@ -2361,16 +2361,16 @@ The main Advantage of Java 8 features is concise coding and enabling Functional 
       				Systemm.out.println(x);
       				Systemm.out.println(y);
       				return (x + y);
-      				}				
-3. Functional Interface:-
-4. Default methods and static methods in interfaces:-
-5. Predefined Functional Interface (Predicate, Function, Consumer, Supplier.. etc):-
-6. Double Colon Opaerator (::) - Method reference, Constructor Reference :-
-7. java.util.function package:-
-8. Streams API and Parallel Stream:-
-9. Date and time API:-
-10. Optional Class:-
-11. Nashron JavaScript Engine:-
+   	----------------------------------------------------------------------------				
+2. Functional Interface:-
+3. Default methods and static methods in interfaces:-
+4. Predefined Functional Interface (Predicate, Function, Consumer, Supplier.. etc):-
+5. Double Colon Opaerator (::) - Method reference, Constructor Reference :-
+6. java.util.function package:-
+7. Streams API and Parallel Stream:-
+8. Date and time API:-
+9. Optional Class:-
+10. Nashron JavaScript Engine:-
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
