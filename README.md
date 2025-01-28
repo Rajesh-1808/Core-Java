@@ -2349,6 +2349,8 @@ The main Advantage of Java 8 features is concise coding and enabling Functional 
    ->Lambda expression is a anonymous(Nameless without return type and without access modifier) function in java.
    ->If we want to work with lambda expressions we must use functional interfaces only other than functional interfaces we will not use lambda expressions anywhere.
    ->The It provides a clear and concise way to implement SAM interface (Single Abstract Method) by using an expression.
+   ->If we have only single statement we no n eed to write curly braces but we have more than one statement then we shoulf close the curly braces ending with semicolon.
+   ->In functional interface we can have on sinle abstract method and any number od static, default, private methods.
    Lambda Syntax :
    -------------
    1. No arguments : () -> Systemm.out.println("Hello");
