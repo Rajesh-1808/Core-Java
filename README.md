@@ -2353,7 +2353,7 @@ The main Advantage of Java 8 features is concise coding and enabling Functional 
    -------------
    1. No arguments : () -> Systemm.out.println("Hello");
    2. One argument : s -> Systemm.out.println(s);
-   3. Two arguments : (x, y) -> x + y;
+   3. Two arguments : (x, y) -> x + y; (lambda expressions consider datatypes automatically no need of considering them explicitly)
    4. With explicit argument types : (Integer x, Integer y) -> x + y
    5. Multiple statements : (x, y) -> {
       				Systemm.out.println(x);
