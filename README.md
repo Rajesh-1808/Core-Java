@@ -2343,13 +2343,16 @@ What's New in JAVA 8?
 8. Nashone JavaScript Engine
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The main Advantage of Java 8 features is concise coding and enabling Functional Programming:
+
 1. Lambda Expression:-
    -------------------
    ->The main Objective os Lambda expressions is to bring the functional programming into java.
    ->Lambda expression is a anonymous(Nameless without return type and without access modifier) function in java.
-   ->If we want to work with lambda expressions we must use functional interfaces only other than functional interfaces we will not use lambda expressions anywhere.
+   ->If we want to work with lambda expressions we must use functional interfaces only other than functional interfaces we will not use lambda 
+     expressions anywhere.
    ->The It provides a clear and concise way to implement SAM interface (Single Abstract Method) by using an expression.
-   ->If we have only single statement we no n eed to write curly braces but we have more than one statement then we shoulf close the curly braces ending with semicolon.
+   ->If we have only single statement we no n eed to write curly braces but we have more than one statement then we shoulf close the curly 
+     braces ending with semicolon.
    ->In functional interface we can have on sinle abstract method and any number od static, default, private methods.
    Lambda Syntax :
    -------------
@@ -2361,16 +2364,23 @@ The main Advantage of Java 8 features is concise coding and enabling Functional 
       				Systemm.out.println(x);
       				Systemm.out.println(y);
       				return (x + y);
-   	----------------------------------------------------------------------------				
-2. Functional Interface:-
-3. Default methods and static methods in interfaces:-
-4. Predefined Functional Interface (Predicate, Function, Consumer, Supplier.. etc):-
-5. Double Colon Opaerator (::) - Method reference, Constructor Reference :-
-6. java.util.function package:-
-7. Streams API and Parallel Stream:-
-8. Date and time API:-
-9. Optional Class:-
-10. Nashron JavaScript Engine:-
+   	----------------------------------------------------------------------------
+   			
+2. Functional Interface (java.util.function package):-
+-----------------------------------------------------
+	->Below all are interfaces only which follows SAM, All Single abstract methodds of interface are Functional Interfaces.
+	->If we want to invoke Lambda expressions FI is mandatory.
+	Predicate:-
+	----------
+		->This is a functional interface and can therefore be used as the assignment target for a lambda expression or method 
+                  reference.
+		->and(Predicate<? super T> other) : Returns a composed predicate that represents a short-circuiting logical AND of this 
+                  predicate and another.
+		->isEqual(Object targetRef) : Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, 		  Object).
+		->negate() : Returns a predicate that represents the logical negation of this predicate.
+		->or(Predicate<? super T> other) : Returns a composed predicate that represents a short-circuiting logical OR of this 			  predicate and another.
+
+ 
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
