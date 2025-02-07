@@ -2368,7 +2368,13 @@ The main Advantage of Java 8 features is concise coding and enabling Functional 
    			
 2. Functional Interface (java.util.function package):-
 -----------------------------------------------------
-	->Below all are interfaces only which follows SAM, All Single abstract methodds of interface are Functional Interfaces.
+  2)Functional Interfaces:-
+---------------------------
+->Pre-Defined Functional Interfaces are available from java.util.Function package.
+->Below all are Interfaces only and each Interface contains only one Abstract Method, All single Abstract Methods of Interface are Functional Interface.
+->If we want to invoke Lambda Expressions we must need to use Functional interface only.
+->Functional Interface can contain only one abstract method and we can take any number of default methods and static Methods.
+->Below all are interfaces only which follows SAM, All Single abstract methodds of interface are Functional Interfaces.
 	->If we want to invoke Lambda expressions FI is mandatory.
 	Predicate:-
 	----------
@@ -2376,11 +2382,54 @@ The main Advantage of Java 8 features is concise coding and enabling Functional 
                   reference.
 		->and(Predicate<? super T> other) : Returns a composed predicate that represents a short-circuiting logical AND of this 
                   predicate and another.
-		->isEqual(Object targetRef) : Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, 		  Object).
+		->isEqual(Object targetRef) : Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, Object).
 		->negate() : Returns a predicate that represents the logical negation of this predicate.
-		->or(Predicate<? super T> other) : Returns a composed predicate that represents a short-circuiting logical OR of this 			  predicate and another.
+		->or(Predicate<? super T> other) : Returns a composed predicate that represents a short-circuiting logical OR of this predicate and another.
 
- 
+                 -->Predicate<Generic Type> referenceName  -->boolean test(value); (p1.and(p2), p1.or(p2), negate()
+                 -->Function<T,R> referenceName            -->R apply(T t);(f1.andThen(f2), f1.compose(f2))
+                 -->Consumer<?>  referenceName             -->void accept(T t);
+                 -->Supplier<R>  referenceName             -->R get();
+                 -->Comparator<?> referenceName            -->int compare(Obj o1, Obj o2);
+                 -->Comparable<?> referenceName            -->int compareTo(Obj o);
+                 -->Runnable                               -->run() 
+
+                 -->BiPredicate
+                 -->BiFunction
+                 -->BiConsumer
+
+
+3)STREAM API:-
+----------------
+-->what is stream ..? -->The Flow of data.
+-->Stream itself is a "method" and "Interface".
+-->Stream is an Interface in the java.util.stream Package.
+-->The Stream API in java, Introduced in java8, provides powerful and expressive way "to perfom operations on collections of data.".
+
+Key Concepts:-
+-------------
+i) Stream Creation:-
+   ->We can create a Stream from Various data sources, such as collections, arrays, or I/O channels.
+
+ii)Intermediate Operations:-
+    -These operations return the new stream.
+    ex:- stream() :- Return the flow of data.
+         filter(Predicate<T> p) :- Filter elements based on given predicate,
+         map(Function<T,R> f) :- Transforms each element using given Function,
+         sorted(Comaparator c):- sorts the elements based on comparator,
+         distinct() : remove duplicates.
+
+iii)Terminal Operations:-
+     -These Operations returns the result or side-effect and close the stream.
+     ex:-collect(Collector<? super T, A, R> collector): converts the stream into different forms such as list or set,
+         forEach(Consumer<? super T> action) : Performs an operation for each element,
+         count() : Returns the number of elements in the stream,
+         findFirst() :- Returns the first element in the stream if present,
+         min(Integer :: compare).get() : Returns the minimum element in thje stream,
+         max(Integer :: compare).get() : returns the maximum element in the stream,
+         reduce(0, Integer::sum) : reduce the elements in to a single value.(i.e sum)
+
+iv) 
 
 =================================================================================================================================================================
 JAVA CHAPTER 1 INTERVIEW QUESTIONS:-
